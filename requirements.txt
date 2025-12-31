@@ -1,0 +1,12 @@
+torch>=2.0
+numpy
+pyyaml
+setuptools
+feature_engine # Optional for complex data pipelines
+scikit-learn # Often useful for metrics
+timm
+transformers
+sentence-transformers
+bitsandbytes
+pillow
+

@@ -1,0 +1,29 @@
+
+run_name: "vl_jepa_v1"
+
+data:
+  dataset_type: "flickr8k" # Now using the tiny real subset
+  batch_size: 2 # Very small subset, small batch
+  num_workers: 0
+  size: 1000 # Dummy size for synthetic
+  
+model:
+  vision_model: 'vit_small_patch16_224'
+  text_model: 'all-MiniLM-L6-v2'
+  predictor_hidden: 512
+  # Legacy/Spin Model Params
+  d_model: 256
+  n_heads: 8
+  n_layers: 4
+  predictor_layers: 2
+  use_ema: true
+  ema_decay: 0.996
+
+
+training:
+  epochs: 10
+  lr: 3.0e-4
+  alpha_sigreg: 0.1
+  grad_accum_steps: 2
+  mixed_precision: true
+  compile: false

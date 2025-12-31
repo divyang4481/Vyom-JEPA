@@ -17,7 +17,56 @@ The goal of Vyom-JEPA is to model the "Vyom" (Infinite Latent Space) where quant
 
 ## 📦 Installation
 
+Prerequisites:
+
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda installed.
+- A CUDA-capable GPU is recommended.
+
+1. Clone the repository:
+
 ```bash
-git clone [https://github.com/divyang4481/Vyom-JEPA.git](https://github.com/divyang4481/Vyom-JEPA.git)
-pip install -r requirements.txt
+git clone https://github.com/divyang4481/Vyom-JEPA.git
+cd Vyom-JEPA
 ```
+
+2. Activate the environment:
+
+```bash
+conda activate venvindraquantum
+```
+
+3. Install the package in editable mode:
+
+````bash
+```bash
+pip install -e .
+pip install timm transformers sentence-transformers bitsandbytes
+````
+
+## 📂 Dataset Setup (Flickr8k)
+
+To get real-world performance:
+
+1.  **Download** Flickr8k from [Kaggle](https://www.kaggle.com/datasets/adityajn105/flickr8k).
+2.  **Extract** to `data/flickr8k/`.
+    - Ensure `captions.txt` is at `data/flickr8k/captions.txt`.
+    - Ensure images are at `data/flickr8k/Images/*.jpg`.
+3.  **Configure**: Set `dataset_type: "flickr8k"` in `config.yaml`.
+
+## 🚀 Usage
+
+Train the model using the provided script:
+
+```bash
+python src/train.py
+```
+
+Configuration can be modified in `config.yaml`.
+
+## 📚 Documentation
+
+- [Quantum-VL-JEPA Architecture](docs/QUANTUM_VL_JEPA.md)
+- [Production Scaling Report](docs/PRODUCTION_SCALING.md)
+- [6GB VRAM Optimization Strategy](docs/6GB_VRAM_STRATEGY.md)
+- [Business Use Cases](docs/BUSINESS_USE_CASES.md)
+- [Roadmap](docs/ROADMAP.md)

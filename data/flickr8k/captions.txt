@@ -1,0 +1,3 @@
+image,caption
+real_dog.jpg,A dog sitting on the grass
+real_cat.jpg,A cat lying on the bed
