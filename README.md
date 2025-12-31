@@ -53,15 +53,36 @@ To get real-world performance:
     - Ensure images are at `data/flickr8k/Images/*.jpg`.
 3.  **Configure**: Set `dataset_type: "flickr8k"` in `config.yaml`.
 
-## 🚀 Usage
+## 🏁 Quick Start
 
-Train the model using the provided script:
+### 1. Train the Model
+
+Train the 150M parameter Quantum Predictor using your local GPU (6GB+ VRAM required):
 
 ```bash
-python src/train.py
+python scripts/train.py
 ```
 
-Configuration can be modified in `config.yaml`.
+- Config: Modifiable in `config.yaml`
+- Logs: Saved to `experiments/vl_jepa_v1/`
+
+### 2. Run Inference
+
+Test the trained model vs specific images and captions:
+
+```bash
+python scripts/inference.py
+```
+
+### 3. Interactive Webcam Demo
+
+Launch the **Quantum Eye** real-time visualization:
+
+```bash
+streamlit run scripts/demo.py
+```
+
+This opens a web UI where you can see the model's "Quantum State" update live as you move objects in front of the camera.
 
 ## 📚 Documentation
 

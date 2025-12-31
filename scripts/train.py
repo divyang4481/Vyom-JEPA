@@ -10,8 +10,8 @@ import time
 from tqdm import tqdm
 import torchvision.transforms as transforms
 
-# Ensure imports work
-sys.path.append(os.getcwd())
+# Ensure imports work from installed package
+# sys.path.append(os.getcwd())
 
 from vyom_jepa.models.quantum_vl_jepa import QuantumVLJEPA
 from vyom_jepa.losses.quantum_losses import FidelityLoss, SIGRegCLoss

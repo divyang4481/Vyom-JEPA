@@ -5,8 +5,7 @@ import os
 import yaml
 import torchvision.transforms as transforms
 
-# Ensure imports work
-sys.path.append(os.getcwd())
+# sys.path.append(os.getcwd())
 
 from vyom_jepa.models.quantum_vl_jepa import QuantumVLJEPA
 
